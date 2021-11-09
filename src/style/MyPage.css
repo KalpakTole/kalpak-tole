@@ -8,30 +8,67 @@
 }
 
 .logo-container {
-	position: absolute;
+	position: relative;
 	width: min(200px, 20%);
 	aspect-ratio: 1;
 	background-color: red;
-	display: flex;
+	display: grid;
+	place-items: center;
 }
 
 .left-part {
+	left: 0;
 	width: 50%;
 	height: 100%;
 	background-color: green;
+	position: absolute;
+	transform: rotateZ(180deg);
 }
 
 .right-part {
+	right: 0;
 	width: 50%;
 	height: 100%;
 	background-color: blue;
-	position: relative;
+	position: absolute;
+}
+
+.stick {
+	width: clamp(10px, 10%, 5px);
+	background-color: #ffbf00;
+	position: absolute;
+	border-radius: 10px;
+	box-shadow: 2px 2px 6px 4px #ff7b00;
+	/* display: grid; */
+	/* place-items: center; */
 }
 
 .main-stick {
-	width: 10%;
+	/* left: 50%; */
 	height: 100%;
-	position: absolute;
-	left: 0;
-	background-color: orange;
+	/* left: 0; */
 }
+
+.left {
+	z-index: 2000;
+}
+
+.right {
+	/* right: 0; */
+	z-index: 10;
+}
+
+.top-small-stick {
+	top: -20%;
+	height: 70%;
+	transform-origin: bottom;
+	transform: rotateZ(45deg);
+}
+
+.bottom-small-stick {
+	bottom: -20%;
+	height: 70%;
+	transform-origin: top;
+	transform: rotateZ(-45deg);
+}
+
