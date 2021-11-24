@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+
+.item-no,
+.item-name {
+	color: white;
+	font-size: larger;
+	text-shadow: 2px 2px 4px black;
+}
+
+.item-no {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	margin: 0 0.5em 0 0.75em;
+}
+
+.item-name {
+	/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+	font-family: "Graduate", cursive;
+	font-size: medium;
+	font-weight: 500;
+}

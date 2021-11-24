@@ -1,11 +1,15 @@
 import React from 'react';
-import MyPage from './MyPage';
+import CenterLogo from './CenterLogo';
+import Navbar from './Navbar';
 
 
-function App() {
+const App = () => {
 	return (
-		<MyPage></MyPage>
+		<>
+			<Navbar />
+			<CenterLogo />
+		</>
 	);
 }
 
-export default App;
+export default App

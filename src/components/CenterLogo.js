@@ -1,7 +1,7 @@
 import React from 'react'
-import '../style/MyPage.css'
+import './CenterLogo.css'
 
-function MyPage() {
+const CenterLogo = () => {
 	return (
 		<div className='landing-page'>
 			<div className="logo-container">
@@ -21,4 +21,4 @@ function MyPage() {
 	)
 }
 
-export default MyPage
+export default CenterLogo
