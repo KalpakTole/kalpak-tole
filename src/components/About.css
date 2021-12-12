@@ -1,0 +1,44 @@
+.about-page {
+	width: 100vw;
+	height: 100vh;
+	background: repeating-conic-gradient(#272727 0% 25%, #252525 0% 50%) 50% /
+		20px 20px;
+	/* background: red; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.left-side,
+.right-side {
+	width: 50%;
+	height: 100%;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+.right-side {
+	background: blue;
+}
+
+.profile-photo {
+	/* margin: 10rem; */
+	height: 90%;
+	width: auto;
+	/* width: min(80%, auto); */
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 4px 4px 4px 4px black, 8px 8px 20px 16px #121212;
+}
+
+@media (max-width: 42em) {
+	.left-side,
+	.right-side {
+		/* display: block; */
+		width: 100%;
+		flex-direction: column;
+	}
+}
