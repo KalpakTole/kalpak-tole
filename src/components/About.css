@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--bright-orange: #ffa500;
+	--neon-orange: #ff6700;
+}
+
+body {
+	margin: 0;
+}
+
 .about-page {
 	width: 100vw;
 	height: 100vh;
@@ -7,21 +26,19 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: row;
 }
 
 .left-side,
 .right-side {
-	width: 50%;
-	height: 100%;
-	background: red;
+	width: 50vw;
+	height: 100vh;
+	/* background: red; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem;
-}
-
-.right-side {
-	background: blue;
+	padding: 0 2rem;
+	flex-direction: column;
 }
 
 .profile-photo {
@@ -29,16 +46,149 @@
 	height: 90%;
 	width: auto;
 	/* width: min(80%, auto); */
-	border: 2px solid white;
+	border: 2px solid var(--bright-orange);
 	border-radius: 10px;
 	box-shadow: 4px 4px 4px 4px black, 8px 8px 20px 16px #121212;
+	filter: grayscale(100%);
+	transition: filter 250ms ease-in-out;
+}
+
+.profile-photo:hover {
+	filter: grayscale(0%);
+}
+
+@media (max-width: 65em) {
+	.profile-photo {
+		height: auto;
+		width: 90%;
+	}
 }
 
 @media (max-width: 42em) {
-	.left-side,
-	.right-side {
-		/* display: block; */
-		width: 100%;
+	.about-page {
+		height: 200vh;
 		flex-direction: column;
 	}
+	.left-side,
+	.right-side {
+		width: 100%;
+	}
+	.myname {
+		font-size: 50%;
+	}
+	.mylocation {
+		font-size: 50%;
+	}
+	.hobby-list {
+		font-size: 50%;
+	}
+}
+
+.name-plate {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+}
+
+.myname {
+	color: var(--neon-orange);
+	font-size: 4vw;
+	font-weight: bold;
+	font-family: "Bungee Shade", cursive;
+	line-height: 1;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.mylocation {
+	color: white;
+	width: 100%;
+	text-align: end;
+	font-family: "Megrim", cursive;
+	font-size: 1.5vw;
+	margin: 0.25em 0.25em 0 0;
+}
+
+.hobby-list {
+	display: flex;
+	align-items: center;
+	font-family: "Roboto Slab", serif;
+	text-transform: uppercase;
+	font-size: 3vw;
+	width: 100%;
+	margin: 1em 0 1em 0;
+	color: var(--bright-orange);
+}
+
+.ilike {
+	display: inline-block;
+	margin-right: 0.3em;
+}
+
+.hobbies {
+	position: relative;
+	height: 100%;
+	display: inline-block;
+}
+
+.webdev {
+	position: absolute;
+	animation: fadeinout 12s infinite;
+	opacity: 0;
+	white-space: nowrap;
+}
+
+.illustrate {
+	position: absolute;
+	animation: fadeinout 12s infinite;
+	animation-delay: 4s;
+	opacity: 0;
+}
+
+.python {
+	position: absolute;
+	animation: fadeinout 12s infinite;
+	animation-delay: 8s;
+	opacity: 0;
+}
+
+@keyframes fadeinout {
+	0% {
+		transform: translateY(20vh);
+		opacity: 0;
+	}
+	6.25% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	25% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	31.25% {
+		transform: translateY(-10vh);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(-10vh);
+		opacity: 0;
+	}
+}
+
+@media (max-width: 42em) {
+	.myname {
+		font-size: 8vw;
+	}
+	.mylocation {
+		font-size: 3vw;
+	}
+	.hobby-list {
+		font-size: 6vw;
+	}
+}
+
+.about-myself {
+	color: white;
 }
