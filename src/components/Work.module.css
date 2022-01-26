@@ -1,0 +1,21 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1;
+	gap: 1rem;
+	margin-inline: 1rem;
+}
+
+.cell {
+	margin: 1rem;
+	padding: 0.5rem;
+	height: 30rem;
+}
+
+.cell:nth-child(odd) {
+	background: hsl(60, 50%, 65%);
+}
+
+.cell:nth-child(even) {
+	background: hsl(325, 55%, 60%);
+}

@@ -6,13 +6,7 @@ const About = () => {
 	return (
 		<div className={classes['about-page']}>
 			<div className={classes['left-side']}>
-				<img
-					src={profilepic}
-					alt='Profile Pic'
-					className={classes['profile-photo']}
-					// width="80%"
-					// height="90%"
-				/>
+				<img src={profilepic} alt='Profile Pic' className={classes['profile-photo']} />
 			</div>
 			<div className={classes['right-side']}>
 				<div className={classes['name-plate']}>
