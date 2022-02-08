@@ -5,12 +5,29 @@ import photo2 from '../assets/photography/photo (2).jpg'
 import photo3 from '../assets/photography/photo (3).jpg'
 import photo4 from '../assets/photography/photo (4).jpg'
 import photo5 from '../assets/photography/photo (5).jpg'
+import Flickity from 'react-flickity-component';
+
+const flickityOptions = {
+	initialIndex: 1,
+	wrapAround: true,
+};
 
 const Photography = () => {
 	return (
-	<>
-		<img src={photo2} alt="The Taj Mahal Hotel" className={classes['my-image']} />
-	</>
+		<Flickity
+			className={classes['my-image']} // default ''
+			elementType={'div'} // default 'div'
+			options={flickityOptions} // takes flickity options {}
+			disableImagesLoaded={false} // default false
+			reloadOnUpdate // default false
+			static // default false
+		>
+			<img src={photo2} alt='The Taj Mahal Hotel' className={classes['my-image']} />
+			<img src={photo1} alt='Dog' className={classes['my-image']} />
+			<img src={photo3} alt='Snowman' className={classes['my-image']} />
+			<img src={photo4} alt='Bowling' className={classes['my-image']} />
+			<img src={photo5} alt='Christmas Tree' className={classes['my-image']} />
+		</Flickity>
 	);
 };
 
