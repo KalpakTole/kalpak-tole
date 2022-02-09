@@ -11,17 +11,18 @@ const flickityOptions = {
 	initialIndex: 0,
 	wrapAround: true,
 	prevNextButtons: true,
+	pageDots: false,
 };
 
 const Photography = () => {
 	return (
 		<Flickity
 			className={classes['flickity-container']} // default ''
-			elementType={'div'} // default 'div'
+			// elementType={'div'} // default 'div'
 			options={flickityOptions} // takes flickity options {}
-			disableImagesLoaded={false} // default false
-			reloadOnUpdate // default false
-			static // default false
+			// disableImagesLoaded={false} // default false
+			// reloadOnUpdate // default false
+			// static // default false
 		>
 			<img src={photo2} alt='The Taj Mahal Hotel' className={classes['my-image']} />
 			<img src={photo1} alt='Dog' className={classes['my-image']} />
