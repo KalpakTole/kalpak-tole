@@ -8,14 +8,15 @@ import photo5 from '../assets/photography/photo (5).jpg'
 import Flickity from 'react-flickity-component';
 
 const flickityOptions = {
-	initialIndex: 1,
+	initialIndex: 0,
 	wrapAround: true,
+	prevNextButtons: true,
 };
 
 const Photography = () => {
 	return (
 		<Flickity
-			className={classes['my-image']} // default ''
+			className={classes['flickity-container']} // default ''
 			elementType={'div'} // default 'div'
 			options={flickityOptions} // takes flickity options {}
 			disableImagesLoaded={false} // default false

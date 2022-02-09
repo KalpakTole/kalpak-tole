@@ -1,14 +1,27 @@
+.work-page {
+	width: 100vw;
+	height: 200vh;
+	background: repeating-conic-gradient(#272727 0% 25%, #252525 0% 50%) 50% / 20px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
 .grid-container {
+	width: 100%;
+	height: 100%;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 1;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 2;
 	gap: 1rem;
 	margin-inline: 1rem;
 }
 
 .cell {
 	margin: 1rem;
-	height: 30rem;
+	/* padding: 1rem; */
+	/* overflow: hidden; */
 }
 
 .cell:nth-child(odd) {
