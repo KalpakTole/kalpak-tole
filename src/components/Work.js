@@ -10,7 +10,6 @@ const Work = () => {
 				<div className={`${classes['cell']} ${classes['photography']}`}>
 					<Photography />
 				</div>
-
 				<div className={`${classes['cell']} ${classes['illustrations']}`}></div>
 				<div className={`${classes['cell']} ${classes['3dmodelling']}`}></div>
 			</div>

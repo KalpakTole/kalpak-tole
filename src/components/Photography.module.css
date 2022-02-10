@@ -1,33 +1,23 @@
-.flickity-container {
-	position: relative;
-	width: 90%;
-	height: 90vh;
-	overflow: hidden;
-}
-
-.my-image {
-	width: 45vh;
-	height: 80vh;
-	object-fit: cover;
-}
-
-button.flickity-button.flickity-prev-next-button {
-	position: absolute !important;
-    z-index: 2000 !important;
-    padding: 2rem !important;
-    border: 3px solid white !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    background: #ffffff88 !important;
-}
 /* .flickity-container {
-	width: 400px;
-	height: 800px;
-	overflow: hidden;
+	position: relative;
+	width: 49.5vh;
+	height: 88vh;
 }
 
 .my-image {
-	width: 400px;
-	height: 800px;
+	width: 100%;
+	aspect-ratio: 9/16;
 	object-fit: cover;
 } */
+
+.flickity-container {
+	position: relative;
+	width: 67.5vh;
+	height: 90vh;
+}
+
+.my-image {
+	width: 100%;
+	aspect-ratio: 3/4;
+	object-fit: cover;
+}

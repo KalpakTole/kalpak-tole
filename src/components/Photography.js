@@ -6,6 +6,7 @@ import photo3 from '../assets/photography/photo (3).jpg'
 import photo4 from '../assets/photography/photo (4).jpg'
 import photo5 from '../assets/photography/photo (5).jpg'
 import Flickity from 'react-flickity-component';
+import './flickity.css';
 
 const flickityOptions = {
 	initialIndex: 0,
@@ -18,11 +19,11 @@ const Photography = () => {
 	return (
 		<Flickity
 			className={classes['flickity-container']} // default ''
-			// elementType={'div'} // default 'div'
+			elementType={'div'} // default 'div'
 			options={flickityOptions} // takes flickity options {}
-			// disableImagesLoaded={false} // default false
-			// reloadOnUpdate // default false
-			// static // default false
+			disableImagesLoaded={false} // default false
+			reloadOnUpdate // default false
+			static // default false
 		>
 			<img src={photo2} alt='The Taj Mahal Hotel' className={classes['my-image']} />
 			<img src={photo1} alt='Dog' className={classes['my-image']} />
