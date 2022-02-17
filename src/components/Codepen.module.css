@@ -1,0 +1,11 @@
+.flickity-container {
+	position: relative;
+	width: 90vh;
+	height: 67.5vh;
+}
+
+.my-image {
+	height: 100%;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+}

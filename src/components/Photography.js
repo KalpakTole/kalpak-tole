@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './Photography.module.css';
+import Flickity from 'react-flickity-component';
+import './flickity.css';
 import photo1 from '../assets/photography/photo (1).jpg'
 import photo2 from '../assets/photography/photo (2).jpg'
 import photo3 from '../assets/photography/photo (3).jpg'
 import photo4 from '../assets/photography/photo (4).jpg'
 import photo5 from '../assets/photography/photo (5).jpg'
-import Flickity from 'react-flickity-component';
-import './flickity.css';
 
 const flickityOptions = {
 	initialIndex: 0,
