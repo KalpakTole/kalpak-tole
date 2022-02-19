@@ -86,13 +86,20 @@
 	box-shadow: 2px 2px 0px white;
 }
 
-.fade-right {
-	animation: fadeRight 0.5s linear forwards;
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.7);
 }
-
-@keyframes fadeRight {
-	100% {
-		transform: translateX(100%);
-		opacity: 0;
-	}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 400ms, transform 400ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 400ms, transform 400ms;
 }
