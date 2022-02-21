@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 /**
  * Hook that alerts clicks outside of the passed ref
  */
-function useOutsideAlerter(ref) {
+function useOutsideAlerter(ref, viewMoreHandler) {
 	useEffect(() => {
 		/**
 		 * Alert if clicked on outside of element
 		 */
 		function handleClickOutside(event) {
 			if (ref.current && !ref.current.contains(event.target)) {
-				alert('You clicked outside of me!');
+				viewMoreHandler(event, true);
 			}
 		}
 		// Bind the event listener
@@ -20,7 +20,7 @@ function useOutsideAlerter(ref) {
 			// Unbind the event listener on clean up
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
-	}, [ref]);
+	}, [ref, viewMoreHandler]);
 }
 
 /**
@@ -28,7 +28,7 @@ function useOutsideAlerter(ref) {
  */
 function OutsideAlerter(props) {
 	const wrapperRef = useRef(null);
-	useOutsideAlerter(wrapperRef);
+	useOutsideAlerter(wrapperRef, props.viewMoreHandler);
 
 	return <div ref={wrapperRef}>{props.children}</div>;
 }
