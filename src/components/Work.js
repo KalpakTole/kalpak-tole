@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import classes from './Work.module.css';
-import OutsideAlerter from './OutsideAlerter';
+// import OutsideAlerter from './OutsideAlerter';
+import ClickAwayListener from 'react-click-away-listener';
 // import Webdev from './Webdev';
 import Photography from './Photography';
 import Codepen from './Codepen';
@@ -23,16 +24,7 @@ const Work = () => {
 
 	const [isAnyCellActive, setIsAnyCellActive] = useState(false);
 
-	const viewMoreHandler = (event, isOutside=false) => {
-		if (isOutside) {
-			setActiveCell({
-				webdev: false,
-				photography: false,
-				codepen: false,
-				art: false,
-			});
-			return;
-		}
+	const viewMoreHandler = (event) => {
 		let cellType = event.target.ariaLabel;
 		if (cellType === 'data-webdev') {
 			setActiveCell({
@@ -68,6 +60,15 @@ const Work = () => {
 		}
 	};
 
+	const noTileSelected = () => {
+		setActiveCell({
+			webdev: false,
+			photography: false,
+			codepen: false,
+			art: false,
+		});
+	}
+
 	useEffect(() => {
 		let activeCellArray = Object.keys(activeCell).map((key) => {
 			return activeCell[key];
@@ -81,7 +82,7 @@ const Work = () => {
 	}, [activeCell, isAnyCellActive]);
 
 	return isAnyCellActive ? (
-		<OutsideAlerter viewMoreHandler={viewMoreHandler}>
+		<ClickAwayListener onClickAway={noTileSelected}>
 			<div className={classes['work-page']}>
 				<div className={classes['grid-container']}>
 					<div className={`${classes['cell']} ${classes['webdev']}`}>
@@ -138,6 +139,7 @@ const Work = () => {
 								</p>
 								<button
 									aria-label='data-photography'
+									
 									className={classes['description-button']}
 									onClick={viewMoreHandler}
 								>
@@ -208,7 +210,7 @@ const Work = () => {
 					</div>
 				</div>
 			</div>
-		</OutsideAlerter>
+		</ClickAwayListener>
 	) : (
 		<div className={classes['work-page']}>
 			<div className={classes['grid-container']}>

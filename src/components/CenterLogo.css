@@ -1,8 +1,7 @@
 .landing-page {
 	width: 100vw;
 	height: 100vh;
-	background: repeating-conic-gradient(#252525 0% 25%, #232323 0% 50%) 50% /
-		20px 20px;
+	background: repeating-conic-gradient(#252525 0% 25%, #232323 0% 50%) 50% / 20px 20px;
 	display: grid;
 	place-items: center;
 	position: relative;

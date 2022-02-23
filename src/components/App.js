@@ -3,6 +3,7 @@ import CenterLogo from './CenterLogo';
 import Navbar from './Navbar';
 import About from './About';
 import Work from './Work';
+import Contact from './Contact';
 
 const App = () => {
 	return (
@@ -11,6 +12,7 @@ const App = () => {
 			<CenterLogo />
 			<About />
 			<Work />
+			<Contact />
 		</>
 	);
 };
