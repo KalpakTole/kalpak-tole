@@ -27,3 +27,15 @@
 	font-family: 'Redressed', cursive;
 	color: var(--neon-orange);
 }
+
+.icon {
+	width: 2em;
+	height: 2em;
+	margin-inline-end: 1em;
+}
+
+.heading {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
